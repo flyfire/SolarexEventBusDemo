@@ -1,5 +1,10 @@
 package com.solarexsoft.solarexeventbus;
 
+import java.lang.annotation.ElementType;
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+import java.lang.annotation.Target;
+
 /**
  * <pre>
  *    Author: houruhou
@@ -7,7 +12,8 @@ package com.solarexsoft.solarexeventbus;
  *    Desc:
  * </pre>
  */
-
+@Retention(RetentionPolicy.RUNTIME)
+@Target(ElementType.METHOD)
 public @interface SolarexSubscribe {
     SolarexThreadMode threadMode() default SolarexThreadMode.POSTING;
 }
