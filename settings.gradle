@@ -1,0 +1,2 @@
+include ':app', ':solarexeventbus'
+rootProject.name='SolarexEventBusDemo'
