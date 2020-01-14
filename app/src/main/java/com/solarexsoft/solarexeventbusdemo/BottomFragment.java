@@ -56,7 +56,7 @@ public class BottomFragment extends Fragment {
     private void onMainEvent(MainEvent event) {
         String log = "main event from post thread = " + event.threadName + ",current thread = " + Thread.currentThread().getName();
         Log.d(MainActivity.TAG, log);
-        tv.setText(log);
+        tv.setText("main event from top frament," + log);
         SolarexEventBus.getDefault().post(new BottomEvent(log));
     }
 
